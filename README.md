@@ -2,11 +2,11 @@
 ### First assignment
 * I follow this docs: https://guides.rubyonrails.org/getting_started.html
 
-Author CRUD is working, Book actions needs work, pending reserch on nested object.
+* Author CRUD is working, Book actions needs work, pending reserch on nested object.
 
 * Heroku URL: https://fast-harbor-33025.herokuapp.com/
 
-github: https://github.com/ElsaAlarconGonzalez/example/
+* github: https://github.com/ElsaAlarconGonzalez/example/
 
 ## To run the app, 
 * #1 git clone github: https://github.com/ElsaAlarconGonzalez/example/
