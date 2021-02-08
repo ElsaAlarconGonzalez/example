@@ -1,24 +1,23 @@
 # README
+### First assignment
+* I follow this docs: https://guides.rubyonrails.org/getting_started.html
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Author CRUD is working, Book actions needs work, pending reserch on nested object.
 
-Things you may want to cover:
+* Heroku URL: https://fast-harbor-33025.herokuapp.com/
 
-* Ruby version
+github: https://github.com/ElsaAlarconGonzalez/example/
 
-* System dependencies
+## To run the app, 
+* #1 git clone github: https://github.com/ElsaAlarconGonzalez/example/
 
-* Configuration
+* #2 cd example && bundle install && rails db:create && rails db:migrate && rails server
 
-* Database creation
+## Heroku deploy 
+* #1 Heroku create 
 
-* Database initialization
+* #2 git push heroku main
 
-* How to run the test suite
+* #3 heroku run rake db:migrate
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* #4 heroku open
