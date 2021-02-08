@@ -10,10 +10,5 @@
   <%= @book.published_year %>
 </p>
 
-<p>
-  <strong>Author:</strong>
-  <%= @book.author_id %>
-</p>
-
-<%= link_to 'Edit', edit_book_path(@book) %> |
-<%= link_to 'Back', books_path %>
+<%= link_to 'Edit', edit_author_book_path(@book.id) %> |
+<%= link_to 'Back', author_path(@book.author_id)%>

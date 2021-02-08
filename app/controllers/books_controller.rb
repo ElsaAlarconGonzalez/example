@@ -12,32 +12,36 @@ class BooksController < ApplicationController
 
   # GET /books/new
   def new
-    @book = Book.new
   end
 
   # GET /books/1/edit
   def edit
+   # @author = Author.find(params[:author_id])
+   #@book = @author.books.find(params[:id])
   end
 
   # POST /books or /books.json
-  def create
-    @book = Book.new(book_params)
+  def create 
+    @author = Author.find(params[:author_id])
+    @book = @author.books.create(book_params) 
 
     respond_to do |format|
       if @book.save
-        format.html { redirect_to @book, notice: "Book was successfully created." }
-        format.json { render :show, status: :created, location: @book }
+        format.html { redirect_to @author, notice: "Book was successfully created." }
+        format.json { render :show, status: :created, location: @author }
       else
         format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @book.errors, status: :unprocessable_entity }
+        format.json { render json: @author.errors, status: :unprocessable_entity }
       end
     end
   end
 
   # PATCH/PUT /books/1 or /books/1.json
   def update
+    @author = Author.find(params[:author_id])
+
     respond_to do |format|
-      if @book.update(book_params)
+      if @author.book.update(book_params)
         format.html { redirect_to @book, notice: "Book was successfully updated." }
         format.json { render :show, status: :ok, location: @book }
       else
@@ -51,7 +55,7 @@ class BooksController < ApplicationController
   def destroy
     @book.destroy
     respond_to do |format|
-      format.html { redirect_to books_url, notice: "Book was successfully destroyed." }
+      format.html { redirect_to author_books_url, notice: "Book was successfully destroyed." }
       format.json { head :no_content }
     end
   end

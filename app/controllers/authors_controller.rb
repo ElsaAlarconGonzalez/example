@@ -8,6 +8,11 @@ class AuthorsController < ApplicationController
 
   # GET /authors/1 or /authors/1.json
   def show
+    @author = Author.find(params[:id])
+    @author_books = @author.books
+    #p "*" * 120
+    #p @author
+    #p "*" * 120
   end
 
   # GET /authors/new
